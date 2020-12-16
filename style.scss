@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+body{
+  background-color: rgb(20, 214, 188);
+}
+
+#root {
+  
+  p, h1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 48px;
+    
+  }
+
+  p {
+    font-weight: 400;
+    color: rgb(0, 200, 255);
+  }
+
+  h1 {
+    font-weight: 700;
+    color: rgb(50, 0, 255);
+
+  }
+
+  &.clicked {
+    
+    h1 {
+      animation: spin 4000ms infinite linear;
+    }
+
+    p {
+      animation: reverse spin 4000ms infinite linear;
+    }
+
+    @keyframes spin { 
+      from { 
+          transform: translate(-50%, -50%) rotate(0deg); 
+      } to { 
+          transform: translate(-50%, -50%) rotate(360deg); 
+      }
+    }
+  }
+}

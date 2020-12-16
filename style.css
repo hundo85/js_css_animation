@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+body {
+  background-color: #14d6bc;
+}
+
+#root p, #root h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 48px;
+}
+
+#root p {
+  font-weight: 400;
+  color: #00c8ff;
+}
+
+#root h1 {
+  font-weight: 700;
+  color: #3200ff;
+}
+
+#root.clicked h1 {
+  -webkit-animation: spin 4000ms infinite linear;
+          animation: spin 4000ms infinite linear;
+}
+
+#root.clicked p {
+  animation: reverse spin 4000ms infinite linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
